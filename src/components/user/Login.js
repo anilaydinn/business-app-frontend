@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Redirect } from "react-router";
 
 import { Form, FormGroup, Label, Input } from "reactstrap";
 import { login } from "../../api/index";
@@ -6,11 +7,21 @@ import { login } from "../../api/index";
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [redirect, setRedirect] = useState(false);
 
   const loginHandler = async (e) => {
     e.preventDefault();
-    await login(username, password);
+    let resp = await login(username, password);
+
+    if (resp) {
+      setRedirect(true);
+    }
+    window.location.reload();
   };
+
+  if (redirect) {
+    return <Redirect to="/" />;
+  }
 
   return (
     <div className="container">
