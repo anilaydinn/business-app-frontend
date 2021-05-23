@@ -60,7 +60,7 @@ export default function Register() {
             <div className="d-flex flex-row-reverse">
               <input
                 type="submit"
-                value="Login"
+                value="Register"
                 className="btn btn-success mt-3"
               />
             </div>

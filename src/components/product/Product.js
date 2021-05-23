@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Button, Alert } from "reactstrap";
 import { getProduct, sendCommentToProduct } from "../../api";
-import Dictaphone from "../Dictaphone";
+import Dictaphone from "./Dictaphone";
 
 export default function Product(props) {
   let { id } = useParams();
