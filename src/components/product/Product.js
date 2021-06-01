@@ -61,13 +61,15 @@ export default function Product(props) {
       </div>
       <div className="row justify-content-end">
         <div className="col-md-2">
-          <Button
-            onClick={() => sendCommentToProductHandler()}
-            className="btn btn-success"
-            style={{ marginLeft: "50px" }}
-          >
-            Send Comment
-          </Button>
+          {username && (
+            <Button
+              onClick={() => sendCommentToProductHandler()}
+              className="btn btn-success"
+              style={{ marginLeft: "50px" }}
+            >
+              Send Comment
+            </Button>
+          )}
         </div>
       </div>
       <div className="row mt-5">
