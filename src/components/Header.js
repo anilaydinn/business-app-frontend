@@ -25,7 +25,7 @@ const useStyles = makeStyles({
 
 export default function Header(props) {
   const classes = useStyles();
-  const [cookies, setCookie, removeCookie] = useCookies(["user-token"]);
+  const [removeCookie] = useCookies(["user-token"]);
 
   const { username } = props;
 
