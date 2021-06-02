@@ -43,7 +43,7 @@ export default function Product(props) {
         <div className="col-md-6" style={{ height: "100%" }}>
           <div className="d-flex ">
             <h2 className="h2">{product.name}</h2>
-            <div style={{ marginLeft: "auto" }}>{product.price}</div>
+            <div style={{ marginLeft: "auto" }}>{product.price}$</div>
           </div>
 
           <div className="d-flex mt-4">
@@ -66,6 +66,7 @@ export default function Product(props) {
               onClick={() => sendCommentToProductHandler()}
               className="btn btn-success"
               style={{ marginLeft: "50px" }}
+              disabled={comment.length == 0}
             >
               Send Comment
             </Button>

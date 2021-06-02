@@ -25,7 +25,7 @@ const useStyles = makeStyles({
 
 export default function Header(props) {
   const classes = useStyles();
-  const [removeCookie] = useCookies(["user-token"]);
+  const [cookies, setCookie, removeCookie] = useCookies(["user-token"]);
 
   const { username } = props;
 
@@ -37,7 +37,7 @@ export default function Header(props) {
     <div>
       <Navbar className={classes.navbar} light={true} expand="md">
         <div className="container">
-          <NavbarBrand href="/">AlBeya</NavbarBrand>
+          <NavbarBrand href="/">Dexter Victims</NavbarBrand>
           <Nav navbar>
             <NavbarText>{username}</NavbarText>
             <UncontrolledDropdown nav inNavbar>
